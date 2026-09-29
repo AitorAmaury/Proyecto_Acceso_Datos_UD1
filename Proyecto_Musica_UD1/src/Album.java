@@ -1,6 +1,47 @@
-public class Album {
-    int id;
-    String titulo;
-    int anio;
-    int idArtista;
+import java.io.Serializable;
+
+public class Album implements Serializable {
+    private int id;
+    private String titulo;
+    private int anio;
+    private int idArtista;
+
+    public Album(int id, String titulo, int anio, int idArtista) {
+        this.id = id;
+        this.titulo = titulo;
+        this.anio = anio;
+        this.idArtista = idArtista;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public int getAnio() {
+        return anio;
+    }
+
+    public void setAnio(int anio) {
+        this.anio = anio;
+    }
+
+    public int getIdArtista() {
+        return idArtista;
+    }
+
+    public void setIdArtista(int idArtista) {
+        this.idArtista = idArtista;
+    }
 }
