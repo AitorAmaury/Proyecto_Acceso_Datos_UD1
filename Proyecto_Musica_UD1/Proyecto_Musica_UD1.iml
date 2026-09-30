@@ -6,10 +6,19 @@
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
-    <orderEntry type="module-library" exported="">
+    <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$USER_HOME$/Desktop/XML - XStream/4a - kxml2-2.3.0.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../../XML - XStream/4a - kxml2-2.3.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../../XML - XStream/4b - xstream-1.4.2.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -18,7 +27,16 @@
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://$USER_HOME$/Desktop/XML - XStream/4b - xstream-1.4.2.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../../XSTREAM/XSTREAM/kxml2-min-2.3.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../../XSTREAM/XSTREAM/xstream-1.4.21.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

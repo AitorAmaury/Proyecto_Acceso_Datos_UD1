@@ -4,7 +4,8 @@ import java.io.InputStreamReader;
 import java.util.List;
 
 public class Main {
-    private static BufferedReader br = new BufferedReader(new InputStreamReader(System.in))
+    private static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
     public static void main(String[] args) {
 
         List<Artista> artistas = GestorArtistas.leerTodos();
@@ -27,28 +28,59 @@ public class Main {
 
             try {
                 opcion = Integer.parseInt(br.readLine());
-            } catch (NumberFormatException e){
-                System.out.println("Error");
-            } catch (IOException e){
-                System.out.println("Error al leer la entrada: "+ e.getMessage());
+            } catch (NumberFormatException e) {
+                System.out.println("Error: introduce un número válido");
+                continue;
+            } catch (IOException e) {
+                System.out.println("Error al leer la entrada: " + e.getMessage());
                 continue;
             }
-            switch (opcion){
+
+            switch (opcion) {
                 case 1:
                     altaArtista(artistas);
-
-                break;
+                    GestorArtistas.guardarTodos(artistas);
+                    break;
 
                 case 2:
+                    altaAlbum(albumes, artistas);
+                    GestorAlbumes.guardarTodos(albumes);
+                    break;
 
+                case 3:
+                    altaCancion(canciones);
+                    GestorCanciones.guardarTodos(canciones);
+                    break;
+
+                case 4:
+                    listarArtistas(artistas);
+                    break;
+
+                case 5:
+                    listarAlbumes(albumes);
+                    break;
+
+                case 6:
+                    listarCanciones(canciones);
+                    break;
+
+                case 7:
+                    GestorXML.exportarArtistasXML(artistas);
+                    break;
+
+                case 0:
+                    System.out.println("Saliendo...");
+                    break;
+
+                default:
+                    System.out.println("Opción no válida");
             }
-        }
 
-
+        } while (opcion != 0);
     }
+
     private static void altaArtista(List<Artista> artistas) {
         try {
-            // ID automático basado en la cantidad de elementos en memoria
             int id = artistas.size() + 1;
 
             System.out.print("Nombre: ");
@@ -56,7 +88,6 @@ public class Main {
             System.out.print("Género musical: ");
             String genero = br.readLine();
 
-            // Le pasamos el ID calculado al constructor
             artistas.add(new Artista(id, nombre, genero));
             System.out.println("Artista añadido con éxito con ID: " + id);
         } catch (IOException e) {
@@ -73,7 +104,6 @@ public class Main {
             System.out.print("Año de publicación: ");
             int anio = Integer.parseInt(br.readLine());
 
-            // Pide el idArtista para asociarlo con la clase Artista
             System.out.print("ID del Artista al que pertenece: ");
             int idArtista = Integer.parseInt(br.readLine());
 
@@ -97,7 +127,6 @@ public class Main {
             System.out.print("Género: ");
             String genero = br.readLine();
 
-            // Pide el idAlbum para asociarlo con la clase Album
             System.out.print("ID del Álbum al que pertenece: ");
             int idAlbum = Integer.parseInt(br.readLine());
 
@@ -110,16 +139,33 @@ public class Main {
         }
     }
 
-    private static void listarArtistas(List<Artista> artistas){
-
+    private static void listarArtistas(List<Artista> artistas) {
+        if (artistas.isEmpty()) {
+            System.out.println("No hay artistas registrados.");
+            return;
+        }
+        for (Artista a : artistas) {
+            System.out.println("ID: " + a.getId() + " | Nombre: " + a.getNombre() + " | Género: " + a.getGenero());
+        }
     }
 
-    private static void listarAlbumes(List<Album> albumes){
-
+    private static void listarAlbumes(List<Album> albumes) {
+        if (albumes.isEmpty()) {
+            System.out.println("No hay álbumes registrados.");
+            return;
+        }
+        for (Album a : albumes) {
+            System.out.println("ID: " + a.getId() + " | Título: " + a.getTitulo() + " | Año: " + a.getAnio() + " | idArtista: " + a.getIdArtista());
+        }
     }
 
-    private static void listarCanciones(List<Cancion> canciones){
-
+    private static void listarCanciones(List<Cancion> canciones) {
+        if (canciones.isEmpty()) {
+            System.out.println("No hay canciones registradas.");
+            return;
+        }
+        for (Cancion c : canciones) {
+            System.out.println("ID: " + c.getId() + " | Título: " + c.getTitulo() + " | Duración: " + c.getDuracion() + "s | Género: " + c.getGenero() + " | idAlbum: " + c.getIdAlbum());
+        }
     }
-
 }

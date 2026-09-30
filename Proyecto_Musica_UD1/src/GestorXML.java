@@ -1,5 +1,4 @@
 import com.thoughtworks.xstream.XStream;
-import com.thoughtworks.xstream.security.AnyTypePermission;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -10,10 +9,10 @@ public class GestorXML {
     public static void exportarArtistasXML(List<Artista> lista) {
         XStream xstream = new XStream();
 
-        // Permisos de seguridad requeridos por XStream
-        xstream.addPermission(AnyTypePermission.ANY);
-        xstream.alias("artista", Artista.class);
+
+        // Alias para personalizar las etiquetas XML
         xstream.alias("artistas", List.class);
+        xstream.alias("artista", Artista.class);
 
         try (FileWriter writer = new FileWriter("artistas.xml")) {
             xstream.toXML(lista, writer);
