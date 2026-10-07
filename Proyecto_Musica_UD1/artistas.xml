@@ -1,0 +1,17 @@
+<artistas>
+  <artista>
+    <id>1</id>
+    <nombre>Fito y Fitipaldis</nombre>
+    <genero>Rock</genero>
+  </artista>
+  <artista>
+    <id>2</id>
+    <nombre>Rosalía</nombre>
+    <genero>Flamenco Pop</genero>
+  </artista>
+  <artista>
+    <id>3</id>
+    <nombre>Bad Bunny</nombre>
+    <genero>Reggaetón</genero>
+  </artista>
+</artistas>

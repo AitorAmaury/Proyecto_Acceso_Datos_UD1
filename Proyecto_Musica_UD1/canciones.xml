@@ -1,0 +1,37 @@
+<canciones>
+  <cancion>
+    <id>1</id>
+    <titulo>Soldadito marinero</titulo>
+    <duracion>228</duracion>
+    <genero>Rock</genero>
+    <idAlbum>1</idAlbum>
+  </cancion>
+  <cancion>
+    <id>2</id>
+    <titulo>Antes de que cuente diez</titulo>
+    <duracion>195</duracion>
+    <genero>Rock</genero>
+    <idAlbum>1</idAlbum>
+  </cancion>
+  <cancion>
+    <id>3</id>
+    <titulo>Saoko</titulo>
+    <duracion>171</duracion>
+    <genero>Flamenco Pop</genero>
+    <idAlbum>2</idAlbum>
+  </cancion>
+  <cancion>
+    <id>4</id>
+    <titulo>Bizcochito</titulo>
+    <duracion>158</duracion>
+    <genero>Flamenco Pop</genero>
+    <idAlbum>2</idAlbum>
+  </cancion>
+  <cancion>
+    <id>5</id>
+    <titulo>Tití Me Preguntó</titulo>
+    <duracion>243</duracion>
+    <genero>Reggaetón</genero>
+    <idAlbum>3</idAlbum>
+  </cancion>
+</canciones>

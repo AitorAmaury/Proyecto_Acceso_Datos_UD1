@@ -1,0 +1,20 @@
+<albumes>
+  <album>
+    <id>1</id>
+    <titulo>Antes de que cuente diez</titulo>
+    <anio>2002</anio>
+    <idArtista>1</idArtista>
+  </album>
+  <album>
+    <id>2</id>
+    <titulo>Motomami</titulo>
+    <anio>2022</anio>
+    <idArtista>2</idArtista>
+  </album>
+  <album>
+    <id>3</id>
+    <titulo>Un Verano Sin Ti</titulo>
+    <anio>2022</anio>
+    <idArtista>3</idArtista>
+  </album>
+</albumes>
